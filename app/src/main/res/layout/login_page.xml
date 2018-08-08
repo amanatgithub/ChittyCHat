@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:elevation="15dp"
+        android:src="@drawable/evolvesms" />
+
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignTop="@+id/numb"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:background="@drawable/login_background"-->
+        <!--android:text="+91"-->
+        <!--android:textSize="32sp"-->
+        <!--android:textStyle="bold" />-->
+
+
+    <EditText
+        android:id="@+id/numb"
+        android:hint="(+91) Mobile No"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+   android:visibility="gone"
+      android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="266dp" />
+
+    <Button
+        android:id="@+id/btnnumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="205dp"
+        android:visibility="gone"
+        android:imeOptions="actionDone"
+        android:background="@color/colorAccent"
+        android:text="Get Otp"
+        android:elevation="15dp"
+
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/otp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="197dp"
+       android:textColor="@color/colorAccent"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:hint="OTP"
+        android:visibility="gone"
+        android:imeOptions="actionDone"
+        android:textSize="32sp"
+        android:textStyle="bold"
+       />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:id="@+id/btnotp"
+        android:textSize="18sp"
+        android:elevation="15dp"
+        android:visibility="gone"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="127dp"
+        android:text="Login"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="218dp" />
+
+
+</RelativeLayout>

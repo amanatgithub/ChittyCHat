@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingVertical="30dp">
+
+      <EditText
+          android:id="@+id/addName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:fontFamily="@font/architects_daughter"
+          android:background="@drawable/login_background"
+          android:hint="Name"
+          android:inputType="textCapSentences"
+          android:textStyle="bold"
+          android:imeOptions="actionNext"
+          android:textSize="24sp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:fontFamily="@font/architects_daughter"
+        android:textSize="24sp"
+        android:inputType="number"
+        android:id="@+id/addNumber"
+        android:imeOptions="actionDone"
+        android:background="@drawable/login_background"
+        android:hint="Add Number (+91)-10 Digits"
+        />
+  </LinearLayout>
+
+
+</LinearLayout>

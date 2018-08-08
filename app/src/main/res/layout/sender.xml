@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFEEF1F0"
+    android:paddingLeft="100dp"
+    android:paddingVertical="7dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:paddingLeft="10dp"
+
+
+android:background="@drawable/login_background"
+        android:textSize="24sp"
+       android:id="@+id/senderMsg"
+        />
+
+
+</RelativeLayout>

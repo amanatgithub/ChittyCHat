@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFEEF1F0"
+    android:paddingVertical="7dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:background="@drawable/login_backgroundd"
+
+        android:textColor="#fff"
+
+        android:paddingLeft="10dp"
+
+        android:textSize="24sp"
+        android:id="@+id/receiverMsg"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
