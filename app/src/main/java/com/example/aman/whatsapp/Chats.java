@@ -50,6 +50,7 @@ public class Chats extends AppCompatActivity {
     DatabaseReference databaseReferenceYouToMe;
     DatabaseReference databaseReferenceYou;
     MediaPlayer mediaPlayer1,mediaPlayer2;
+    LinearLayoutManager linearLayoutManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,12 +62,14 @@ public class Chats extends AppCompatActivity {
         editText=findViewById(R.id.msg);
         sendButton=findViewById(R.id.btnSend);
         recyclerView=findViewById(R.id.rViewChatBlock);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        linearLayoutManager=new LinearLayoutManager(this);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(msgAdapter);
-        taskDatabase= Room.databaseBuilder(this,TaskDatabase.class,clientNumb+"-db").allowMainThreadQueries().build();
-        taskDao=taskDatabase.getTaskDao();
         firebaseAuth=FirebaseAuth.getInstance();
         firebaseUser=firebaseAuth.getCurrentUser();
+        taskDatabase= Room.databaseBuilder(this,TaskDatabase.class,firebaseUser.getPhoneNumber()+clientNumb+"-db").allowMainThreadQueries().build();
+        taskDao=taskDatabase.getTaskDao();
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference();
         databaseReferenceMe=databaseReference.child(firebaseUser.getPhoneNumber());
@@ -120,8 +123,9 @@ public class Chats extends AppCompatActivity {
                     messageArrayList.clear();
 
                     for(Task task:tasks)
-                        messageArrayList.add(new Message(task.getMessage(),task.getMessageOwner()));
-                       msgAdapter.notifyDataSetChanged();
+                      messageArrayList.add(new Message(task.getMessage(),task.getMessageOwner()));
+                        msgAdapter.notifyDataSetChanged();
+
             }
         });
 
@@ -146,5 +150,6 @@ public class Chats extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         databaseReferenceYouToMe.removeValue();
+        finish();
     }
 }

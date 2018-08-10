@@ -23,7 +23,6 @@
             android:textSize="32sp"
             android:paddingLeft="20dp"
             android:inputType="textCapSentences"
-            android:imeOptions="actionDone"
             android:background="@drawable/login_background"
             />
         <Button
